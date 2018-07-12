@@ -38,7 +38,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Blog</a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{route('admin.category.index')}}" class="nav-link">Categories</a></li>
-                            <li><a href="#" class="nav-link">Resources</a></li>
+                            <li><a href="{{route('admin.article.index')}}" class="nav-link">Resources</a></li>
                         </ul>
                     </li>
                 </ul>

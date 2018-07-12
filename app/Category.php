@@ -15,7 +15,7 @@ class Category extends Model
         $this->attributes['slug'] = Str::slug( mb_substr($this->title, 0, 40) . "-" . \Carbon\Carbon::now()->format('dmyHi'), '-');
     }
     // Get Children Category
-    public  function children(){
+    public function children(){
         return $this->hasMany(self::class , 'parent_id');
     }
 }
