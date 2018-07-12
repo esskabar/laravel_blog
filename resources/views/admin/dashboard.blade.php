@@ -27,14 +27,14 @@
         </div>
         <div class="row">
             <div class="col-sm-6">
-                <a class="btn btn-block btn-default" href="#">Create Category</a>
+                <a type="button" class="btn btn-primary btn-lg btn-block" href="#">Create Category</a>
                 <a class="list-group-item" href="#">
                     <h4 class="list-group-item-heading">First Category</h4>
                     <p class="list-group-item-text">Count Resources</p>
                 </a>
             </div>
             <div class="col-sm-6">
-                <a class="btn btn-block btn-default" href="#">Create Resource</a>
+                <a type="button" class="btn btn-primary btn-lg btn-block" href="#">Create Resource</a>
                 <a class="list-group-item" href="#">
                     <h4 class="list-group-item-heading">Last Resources</h4>
                     <p class="list-group-item-text">Count Resources</p>
