@@ -6,22 +6,22 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="jumbotron">
-                    <p><span class="label label-primary">Category 0</span></p>
+                    <p class="lead text-center"><span class="label label-primary">Category 0</span></p>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="jumbotron">
-                    <p><span class="label label-primary">Resources 0</span></p>
+                    <p class="lead text-center"><span class="label label-primary">Resources 0</span></p>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="jumbotron">
-                    <p><span class="label label-primary">Members 0</span></p>
+                    <p class="lead text-center"><span class="label label-primary">Members 0</span></p>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="jumbotron">
-                    <p><span class="label label-primary">Guests 0</span></p>
+                    <p class="lead text-center"><span class="label label-primary">Guests 0</span></p>
                 </div>
             </div>
         </div>
