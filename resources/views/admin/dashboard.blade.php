@@ -28,17 +28,21 @@
         <div class="row">
             <div class="col-sm-6">
                 <a type="button" class="btn btn-primary btn-lg btn-block" href="#">Create Category</a>
-                <a class="list-group-item" href="#">
-                    <h4 class="list-group-item-heading">First Category</h4>
-                    <p class="list-group-item-text">Count Resources</p>
-                </a>
+                @foreach( $categories as $category)
+                    <a class="list-group-item" href="{{route('admin.category.edit' , $category )}}">
+                        <h4 class="list-group-item-heading">{{$category->title}}</h4>
+                        <p class="list-group-item-text">{{$category->articles()->count()}}</p>
+                    </a>
+                @endforeach
             </div>
             <div class="col-sm-6">
-                <a type="button" class="btn btn-primary btn-lg btn-block" href="#">Create Resource</a>
-                <a class="list-group-item" href="#">
-                    <h4 class="list-group-item-heading">Last Resources</h4>
-                    <p class="list-group-item-text">Count Resources</p>
-                </a>
+                @foreach( $articles as $article)
+                    <a type="button" class="btn btn-primary btn-lg btn-block" href="{{route('admin.article.edit' , $article )}}">
+                        <h4 class="list-group-item-heading">{{$article->title}}</h4>
+                        <p class="list-group-item-text">{{$article->categories()->pluck('title')->implode(', ')}}</p>
+                    </a>
+                @endforeach
+
             </div>
         </div>
     </div>
