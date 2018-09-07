@@ -16,8 +16,10 @@ class UserController extends Controller
     public function index()
     {
         //
+//        var_dump(User::paginate());
+//        die();
         return view('admin.user_management.users.index' , [
-           'users' => User::paginate()
+           'users' => User::paginate(10)
         ]);
     }
 
