@@ -46,7 +46,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
+        ]);
+
+        User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => bcrypt($request['password'])
+        ]);
+
+        return redirect()->route('admin.user_management.user.index');
+
     }
 
     /**
@@ -68,7 +81,9 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+       return view('admin.user_management.users.edit' , [
+           'user' => $user
+       ]);
     }
 
     /**
@@ -80,7 +95,25 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $validator = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => [
+                'required',
+                'string',
+                'email',
+                'max:255',
+                \Illuminate\Validation\Rule::unique('users')->ignore($user->id),
+
+            ],
+            'password' => 'nullable|string|min:6|confirmed',
+        ]);
+        $user->name = $request['name'];
+        $user->email = $request['email'];
+        $request['password'] == null ?: $user->password = bcrypt($request['password']);
+        $user->save();
+
+        return redirect()->route('admin.user_management.user.index');
+
     }
 
     /**
