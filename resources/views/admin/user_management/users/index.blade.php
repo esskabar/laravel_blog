@@ -44,7 +44,9 @@
             <tfoot>
             <tr>
                 <td colspan="3">
-                    <ul class="pagination pull-right">{{$users->links()}}</ul>
+                    <ul class="pagination pull-right">
+                        {{$users->links()}}
+                    </ul>
                 </td>
             </tr>
             </tfoot>
