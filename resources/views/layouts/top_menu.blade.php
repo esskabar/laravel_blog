@@ -10,7 +10,7 @@
             </ul>
     @else
         <li class="nav-item" >
-            <a href="{{url("blog/category/$category->slug")}}" class="dropdown-item" 1111>{{$category->title}}</a>
+            <a href="{{url("blog/category/$category->slug")}}" class="dropdown-item">{{$category->title}}</a>
     @endif
         </li>
 @endforeach

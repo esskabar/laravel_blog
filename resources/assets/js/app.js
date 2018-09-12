@@ -7,12 +7,6 @@
 
 require('./bootstrap');
 
-//CKEDITOR
-$(document).ready(function(){
-    console.log('CKEDITOR')
-    CKEDITOR.replace( 'description_short' );
-    CKEDITOR.replace( 'description' );
-})
 
 window.Vue = require('vue');
 
@@ -24,6 +18,24 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
+//CKEDITOR
+$(document).ready(function(){
+
+    CKEDITOR.replace( 'description_short' );
+    CKEDITOR.replace( 'description' );
+})
+
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        URLhashListener: true,
+        mouseDrag: false
+    });
+});
+
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    // components: {
+    //     'example-component': require('./components/ExampleComponent.vue')
+    // }
 });
