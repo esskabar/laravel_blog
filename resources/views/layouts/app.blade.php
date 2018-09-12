@@ -20,6 +20,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="app">
@@ -27,40 +28,10 @@
         @include('layouts.header')
 
         <main class="py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <h2 class="border-bottom text-center">Standart Vue+laravel</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
-                            <div class="btn-group mr2"><a class="btn btn-secondary" href="#1">Example component</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="owl-carousel owl-theme mt-5">
-                            <div class="row m-2" data-hash="1">
-                                <div class="col-md-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h2 class="text-center" style="min-height: 300px">
-                                                #1 Example Component
-                                            </h2>
-                                            <example-component></example-component>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             @yield('content')
 
+            {{--@include('start')--}}
 
         </main>
 
@@ -68,5 +39,6 @@
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </body>
 </html>

@@ -27,6 +27,7 @@ Route::group(['prefix' => 'admin' , 'namespace' => 'Admin' , 'middleware' => ['a
 Route::get('/', function () {
     return view('blog.home');
 });
+Route::get('/start',  'StartController@index');
 
 Auth::routes();
 
