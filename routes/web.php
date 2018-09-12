@@ -28,6 +28,7 @@ Route::get('/', function () {
     return view('blog.home');
 });
 Route::get('/start',  'StartController@index');
+Route::get('/start/get-json',  'StartController@getJson');
 
 Auth::routes();
 

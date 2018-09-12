@@ -10,8 +10,8 @@
         <div class="col-sm-4">
             <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group mr2" role="group" aria-label="First group">
-                    <a type="button" class="btn btn-secondary" href="#1">Example component</a>
-                    <a type="button" class="btn btn-secondary" href="#2">Vue -> Blade</a>
+                    <a type="button" class="btn btn-secondary" href="#1">#1 Example component</a>
+                    <a type="button" class="btn btn-secondary" href="#2">#2 Vue -> Blade</a>
                 </div>
             </div>
         </div>
@@ -39,6 +39,18 @@
                                    Send data in Vue from Blade
                                 </h2>
                                 <prop-component :urldata="{{json_encode($url_data)}}"></prop-component>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-2" data-hash="3">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="text-center" style="min-height: 300px">
+                                    #3 Ajax
+                                </h2>
+                                <ajax-component :urldata="{{json_encode($url_data)}}"></ajax-component>
                             </div>
                         </div>
                     </div>

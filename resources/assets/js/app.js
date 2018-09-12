@@ -18,6 +18,8 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('prop-component', require('./components/PropComponent.vue'));
+Vue.component('ajax-component', require('./components/AjaxComponent.vue'));
+
 
 //CKEDITOR
 $(document).ready(function(){

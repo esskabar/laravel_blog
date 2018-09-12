@@ -20,4 +20,16 @@ class StartController extends Controller
 
         return view('start', ['url_data' => $url_data]);
     }
+    public function getJson(){
+        return [
+            array(
+                'title' => 'Google',
+                'url' => 'https://www.google.com'
+            ),
+            array(
+                'title' => 'Yandex',
+                'url' => 'https://yandex.ua/'
+            )
+        ];
+    }
 }
