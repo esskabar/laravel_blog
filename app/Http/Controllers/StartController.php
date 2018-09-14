@@ -38,6 +38,17 @@ class StartController extends Controller
             'labels' => ['март' , 'апрель' , 'май' , 'июнь'],
             'datasets' => array([
                 'label' => 'Salling',
+                'backgroundColor' => ['#D01919' , '#F26202' , '#EAAE00' , '#B5CC18'],
+                'data' => [15000,50000,10000,80000],
+            ])
+        ];
+    }
+    public function chartRandom()
+    {
+        return[
+            'labels' => ['март' , 'апрель' , 'май' , 'июнь'],
+            'datasets' => array([
+                'label' => 'Salling',
                 'backgroundColor' => '#F26202',
                 'data' => [15000,50000,10000,80000],
             ])
