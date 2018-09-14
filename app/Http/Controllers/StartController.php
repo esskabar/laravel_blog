@@ -40,7 +40,13 @@ class StartController extends Controller
                 'label' => 'Salling',
                 'backgroundColor' => ['#D01919' , '#F26202' , '#EAAE00' , '#B5CC18'],
                 'data' => [15000,50000,10000,80000],
-            ])
+            ],
+                [
+                    'label' => 'Last Salling',
+                    'backgroundColor' => ['#D01919' , '#F26202' , '#EAAE00' , '#B5CC18'],
+                    'data' => [5000,45000,7000,60000],
+                ]
+                )
         ];
     }
     public function chartRandom()
@@ -48,10 +54,15 @@ class StartController extends Controller
         return[
             'labels' => ['март' , 'апрель' , 'май' , 'июнь'],
             'datasets' => array([
-                'label' => 'Salling',
-                'backgroundColor' => '#F26202',
-                'data' => [15000,50000,10000,80000],
-            ])
+                    'label' => 'Silver',
+                    'backgroundColor' => '#16AB39',
+                    'data' => [rand(0,40000),rand(0,40000),rand(0,40000),rand(0,40000)],
+                ],
+                [
+                    'label' => 'Gold',
+                    'backgroundColor' => '#B5CC18',
+                    'data' => [rand(0,40000),rand(0,40000),rand(0,40000),rand(0,40000)],
+                ])
         ];
     }
 }
