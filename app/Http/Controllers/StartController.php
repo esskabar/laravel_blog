@@ -32,4 +32,15 @@ class StartController extends Controller
             )
         ];
     }
+    public function chartData()
+    {
+        return[
+            'labels' => ['март' , 'апрель' , 'май' , 'июнь'],
+            'datasets' => array([
+                'label' => 'Salling',
+                'backgroundColor' => '#F26202',
+                'data' => [15000,50000,10000,80000],
+            ])
+        ];
+    }
 }

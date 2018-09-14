@@ -37,7 +37,13 @@
         },
         methods: {
             update: function(){
-                console.log(this.urldata)
+            this.is_refresh = true
+               axios.get('/start/get-json').then((response) => {
+                    console.log(response)
+                    this.urldata = response.data
+                    this.is_refresh = false
+                    this.id++
+               });
             }
         }
     }
