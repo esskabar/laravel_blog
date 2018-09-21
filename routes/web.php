@@ -27,6 +27,10 @@ Route::group(['prefix' => 'admin' , 'namespace' => 'Admin' , 'middleware' => ['a
 Route::get('/', function () {
     return view('blog.home');
 });
+Route::get('/default' , function(){
+    return view('default');
+});
+Route::post('/image/upload' , 'ImageController@upload')->name('image.upload');
 Route::get('/start',  'StartController@index');
 Route::get('/start/get-json',  'StartController@getJson');
 Route::get('/start/data-chart',  'StartController@chartData');
