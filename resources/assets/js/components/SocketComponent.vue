@@ -3,8 +3,7 @@
         <div class="row">
            <div class="col-sm-12">
                  <line-chart :chart-data="data" :height="100" :options="{responsive: true, maintainAspectRation: true}" ></line-chart>
-                 <label>realtime</label>
-                 <input type="checkbox" v-model="realtime">
+                 <input type="checkbox" v-model="realtime">realtime
                  <input type="text" v-model="label">
                  <input type="text" v-model="sale">
                  <button @click="sendData" class="btn btn-primary btn-xs text mt-1 mh-100">Update</button>
@@ -28,7 +27,7 @@
             }
         },
         mounted() {
-            var socket = io('http://localhost:3000');
+            var socket = io('http://laravel.local:3000');
 
             socket.on("news-action:App\\Events\\NewsEvent" , function(data){
                 this.data = data.result;

@@ -8,6 +8,9 @@
         <div class="col-sm-4">
             <h2 class="border-bottom text-center">ChartJS: Vue+Laravel</h2>
         </div>
+        <div class="col-sm-4">
+            <h2 class="border-bottom text-center">RealTime: Vue+Laravel</h2>
+        </div>
     </div>
     <div class="row">
         <div class="col-sm-4">
@@ -31,7 +34,7 @@
         <div class="col-sm-4">
             <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group mr2" role="group" aria-label="Third group">
-                    <a type="button" class="btn btn-secondary" href="#7">REAL_TIME</a>
+                    <a type="button" class="btn btn-secondary" href="#7">ChatJS</a>
                 </div>
             </div>
         </div>
