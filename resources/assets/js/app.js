@@ -23,6 +23,8 @@ Vue.component('chartline-component', require('./components/ChartlineComponent.vu
 Vue.component('chartpie-component', require('./components/ChartpieComponent.vue'));
 Vue.component('chartrandom-component', require('./components/ChartrandomComponent.vue'));
 Vue.component('socket-component', require('./components/SocketComponent.vue'));
+Vue.component('image-upload', require('./components/ImageUpload.vue'));
+
 
 //CKEDITOR
 $(document).ready(function(){
