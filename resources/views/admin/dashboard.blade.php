@@ -27,7 +27,7 @@
         </div>
         <div class="row">
             <div class="col-sm-6">
-                <a type="button" class="btn btn-primary btn-lg btn-block" href="#">Create Category</a>
+                <a type="button" class="btn btn-light btn-lg btn-block" href="#">Create Category</a>
                 @foreach( $categories as $category)
                     <a class="list-group-item" href="{{route('admin.category.edit' , $category )}}">
                         <h4 class="list-group-item-heading">{{$category->title}}</h4>
@@ -37,7 +37,7 @@
             </div>
             <div class="col-sm-6">
                 @foreach( $articles as $article)
-                    <a type="button" class="btn btn-primary btn-lg btn-block" href="{{route('admin.article.edit' , $article )}}">
+                    <a type="button" class="btn btn-light btn-lg btn-block" href="{{route('admin.article.edit' , $article )}}">
                         <h4 class="list-group-item-heading">{{$article->title}}</h4>
                         <p class="list-group-item-text">{{$article->categories()->pluck('title')->implode(', ')}}</p>
                     </a>

@@ -1,0 +1,8 @@
+.navbar-expand-md .navbar-nav{
+  align-items: center;
+  a{
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}

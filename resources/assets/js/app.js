@@ -26,6 +26,7 @@ Vue.component('socket-component', require('./components/SocketComponent.vue'));
 
 //CKEDITOR
 $(document).ready(function(){
+
     CKEDITOR.replace( 'description_short' );
     CKEDITOR.replace( 'description' );
 })

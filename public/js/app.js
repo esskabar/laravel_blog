@@ -37881,6 +37881,7 @@ Vue.component('socket-component', __webpack_require__(291));
 
 //CKEDITOR
 $(document).ready(function () {
+
     CKEDITOR.replace('description_short');
     CKEDITOR.replace('description');
 });

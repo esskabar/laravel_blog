@@ -16,25 +16,25 @@
         <div class="col-sm-4">
             <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group mr2" role="group" aria-label="First group">
-                    <a type="button" class="btn btn-secondary" href="#1">#1 Example component</a>
-                    <a type="button" class="btn btn-secondary" href="#2">#2 Vue -> Blade</a>
-                    <a type="button" class="btn btn-secondary" href="#3">#3 AJAX</a>
+                    <a type="button" class="btn btn-light" href="#1">#1 Example component</a>
+                    <a type="button" class="btn btn-light" href="#2">#2 Vue -> Blade</a>
+                    <a type="button" class="btn btn-light" href="#3">#3 AJAX</a>
                 </div>
             </div>
         </div>
         <div class="col-sm-4">
             <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group mr2" role="group" aria-label="Second group">
-                    <a type="button" class="btn btn-secondary" href="#4">Line</a>
-                    <a type="button" class="btn btn-secondary" href="#5">Pie</a>
-                    <a type="button" class="btn btn-secondary" href="#6">Trigger</a>
+                    <a type="button" class="btn btn-light" href="#4">Line</a>
+                    <a type="button" class="btn btn-light" href="#5">Pie</a>
+                    <a type="button" class="btn btn-light" href="#6">Trigger</a>
                 </div>
             </div>
         </div>
         <div class="col-sm-4">
             <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group mr2" role="group" aria-label="Third group">
-                    <a type="button" class="btn btn-secondary" href="#7">ChatJS</a>
+                    <a type="button" class="btn btn-light" href="#7">ChatJS</a>
                 </div>
             </div>
         </div>
