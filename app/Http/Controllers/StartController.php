@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
+
 class StartController extends Controller
 {
     public function index()
@@ -20,7 +23,9 @@ class StartController extends Controller
 
         return view('start', ['url_data' => $url_data]);
     }
-    public function getJson(){
+
+    public function getJson()
+    {
         return [
             array(
                 'title' => 'Google',
@@ -32,37 +37,64 @@ class StartController extends Controller
             )
         ];
     }
+
     public function chartData()
     {
-        return[
-            'labels' => ['март' , 'апрель' , 'май' , 'июнь'],
+        return [
+            'labels' => ['март', 'апрель', 'май', 'июнь'],
             'datasets' => array([
                 'label' => 'Salling',
-                'backgroundColor' => ['#D01919' , '#F26202' , '#EAAE00' , '#B5CC18'],
-                'data' => [15000,50000,10000,80000],
+                'backgroundColor' => ['#D01919', '#F26202', '#EAAE00', '#B5CC18'],
+                'data' => [15000, 50000, 10000, 80000],
             ],
                 [
                     'label' => 'Last Salling',
-                    'backgroundColor' => ['#D01919' , '#F26202' , '#EAAE00' , '#B5CC18'],
-                    'data' => [5000,45000,7000,60000],
+                    'backgroundColor' => ['#D01919', '#B5CC18'],
+                    'data' => [18000, 55000, 7000, 60000],
                 ]
-                )
+            )
         ];
     }
+
     public function chartRandom()
     {
-        return[
-            'labels' => ['март' , 'апрель' , 'май' , 'июнь'],
+        return [
+            'labels' => ['март', 'апрель', 'май', 'июнь'],
             'datasets' => array([
-                    'label' => 'Silver',
-                    'backgroundColor' => '#16AB39',
-                    'data' => [rand(0,40000),rand(0,40000),rand(0,40000),rand(0,40000)],
-                ],
+                'label' => 'Silver',
+                'backgroundColor' => '#16AB39',
+                'data' => [rand(0, 40000), rand(0, 40000), rand(0, 40000), rand(0, 40000)],
+            ],
                 [
                     'label' => 'Gold',
                     'backgroundColor' => '#B5CC18',
-                    'data' => [rand(0,40000),rand(0,40000),rand(0,40000),rand(0,40000)],
+                    'data' => [rand(0, 40000), rand(0, 40000), rand(0, 40000), rand(0, 40000)],
                 ])
         ];
+    }
+
+    public function newEvent(\Illuminate\Http\Request $request)
+    {
+        $result = [
+            'labels' => ['март', 'апрель', 'май', 'июнь'],
+            'datasets' => array([
+                'label' => 'Salling',
+                'backgroundColor' => ['#D01919', '#F26202', '#EAAE00', '#B5CC18'],
+                'data' => [15000, 50000, 10000, 80000],
+                ])
+        ];
+
+        if($request->has('label')){
+            $result['labels'][] = $request->input('label');
+            $result['datasets'][0]['data'][] = (integer)$request->input('sale');
+            if($request->has('realtime')){
+                if(filter_var($request->input('realtime'), FILTER_VALIDATE_BOOLEAN )){
+                    event(new \App\Events\NewEvent($result));
+                }
+            }
+
+        }
+
+        return $result;
     }
 }
